@@ -23,5 +23,14 @@ go run fetch.go
 
 # 特別感謝
 
-zhusee2 <https://github.com/zhusee2/bumbler-to-speech>
+## zhusee2 <https://github.com/zhusee2/bumbler-to-speech>
 	page: <http://zhusee2.github.io/bumbler-to-speech/>
+
+## 萌典 <https://www.moedict.tw/#萌>
+```
+API
+spec - http://3du.tw/
+/uni/ 是把 {[abcd]} 轉成相應的 Unicode 字元。<-- 客戶端用這個通常最方便。 -> https://www.moedict.tw/uni/%E8%90%8C
+/raw/ 是 kcwu 抓的源 json 檔，Big5 區之外的字以造字碼 {[abcd]} 表示。 -> https://www.moedict.tw/raw/%E8%90%8C
+/pua/ 與 /uni/ 相同，只是動態組字改用 @medicalwei 的造字替代。 -> https://www.moedict.tw/pua/%E8%90%8C
+```
