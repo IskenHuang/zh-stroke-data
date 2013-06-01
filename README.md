@@ -20,3 +20,8 @@ go run fetch.go
 拋棄該著作依著作權法所享有之權利，包括所有相關 與鄰接的法律權利，並宣告將該著作貢獻至公眾領域。
 
 
+
+# 特別感謝
+
+zhusee2 <https://github.com/zhusee2/bumbler-to-speech>
+	page: <http://zhusee2.github.io/bumbler-to-speech/>
