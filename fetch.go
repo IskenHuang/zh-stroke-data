@@ -9,8 +9,9 @@ import "strings"
 import "runtime"
 import "time"
 
-const baseDir = "data"
-const xmlBaseUrl = "http://stroke-order.learningweb.moe.edu.tw/provideStrokeInfo.do?big5="
+const DELAY = 1500
+const BASEDIR = "data"
+const XMLBASEURL = "http://stroke-order.learningweb.moe.edu.tw/provideStrokeInfo.do?big5="
 const imageBaseUrl = "http://stroke-order.learningweb.moe.edu.tw/showWordImage.do?big5="
 
 
@@ -29,8 +30,8 @@ func fetchUrl(url string) (*[]byte, error) {
 
 func fetchStrokeXml(code int) {
 	hex := fmt.Sprintf("%x",code)
-	url := xmlBaseUrl + hex
-	filename := path.Join( baseDir, hex + ".xml" )
+	url := XMLBASEURL + hex
+	filename := path.Join( BASEDIR, hex + ".xml" )
 
 	fi, err := os.Stat(filename)
 	if fi != nil {
@@ -38,6 +39,7 @@ func fetchStrokeXml(code int) {
 		return
 	}
 
+	time.Sleep(DELAY * time.Millisecond)
 	xmlContentP, err := fetchUrl(url)
 	if err != nil {
 		log.Println(err)
@@ -55,7 +57,6 @@ func fetchStrokeXml(code int) {
 	// filename string, data []byte, perm os.FileMode
 	fmt.Print(".")
 	ioutil.WriteFile(filename, xmlContent, 0666)
-	time.Sleep(500 * time.Millisecond)
 }
 
 func main() {
@@ -79,7 +80,7 @@ func main() {
 
 	// 0xA440-0xC67E
 	// 0xC940-0xF9D5
-	os.Mkdir(baseDir, 0777)
+	os.Mkdir(BASEDIR, 0777)
 
 	for code := 0xa440 ; code < 0xc67e ; code++ {
 		in <- code

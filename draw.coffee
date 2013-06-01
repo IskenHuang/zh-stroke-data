@@ -5,7 +5,7 @@ $ ->
       nodes.push n if n.nodeType == 1
     return nodes
 
-  drawOutline = (paper, outline ,pathAttrs) ->
+  strokeOutline = (paper, outline ,pathAttrs) ->
     path = []
     for node in outline.childNodes
       continue if node.nodeType != 1
@@ -18,30 +18,40 @@ $ ->
           path.push [ "L", parseFloat(a.x.value) , parseFloat(a.y.value) ]
         when "QuadTo"
           path.push [ "Q", parseFloat(a.x1.value) , parseFloat(a.y1.value), parseFloat(a.x2.value), parseFloat(a.y2.value) ]
-    paper.path(path).attr(pathAttrs).transform("s0.2,0.2,0,0")
+    outlineElement = paper.path(path).attr(pathAttrs).transform("s0.2,0.2,0,0")
+    # outlineElement.hover (-> this.transform("s0.3") ), (-> this.transform("s0.2") )
+    return outlineElement
 
   fetchStrokeXml = (code, cb) -> $.get "utf8/" + code.toLowerCase() + ".xml", cb, "xml"
 
-  strokeWord = (word) ->
+  strokeWord = (word, cb) ->
     utf8code = escape(word).replace(/%u/ , "")
     fetchStrokeXml utf8code, (doc) ->
+      outlines = doc.getElementsByTagName 'Outline'
+
       paper = Raphael("holder", 430, 430)
       # color = "hsb(.8, .75, .75)"
       Raphael.getColor() # skip 1st color
       Raphael.getColor() # skip 2second color
       color = Raphael.getColor()
-      pathAttrs = { stroke: color, "stroke-width": 5, "stroke-linecap": "round", "fill": color }
+      pathAttrs = { stroke: color, "stroke-width": 5, "stroke-linecap": "round", "fill": color, "opacity": 0.5 }
       timeoutSeconds = 0
-      delay = 500
-      for outline in doc.getElementsByTagName 'Outline'
+      delay = 800
+      for outline in outlines
         do (outline) ->
           setTimeout (->
-            drawOutline(paper,outline,pathAttrs)
+            outline = strokeOutline(paper, outline, pathAttrs)
+            outline.animate({ "opacity": 1 }, delay)
           ), timeoutSeconds += delay
 
-  strokeWords = (words) -> strokeWord(a) for a in words.split //
+  strokeWords = (words) -> strokeWord(a) for a in words.split(//).reverse()
 
   $('#word').change (e) ->
+    $('#holder').empty()
     word = $(this).val()
     strokeWords(word)
+
+  if location.hash
+    w = decodeURI location.hash.replace /^#/, ""
+    $('#word').val(w) if w
   strokeWords($('#word').val())
