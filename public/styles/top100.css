@@ -5,9 +5,10 @@
   font-family: Arial;
   color: #666;
   line-height: 1;
+  cursor: pointer;
 }
 
-/* line 9, ../sass/top100.scss */
+/* line 10, ../sass/top100.scss */
 #holder {
   border: 1px solid #ccc;
   width: 100%;
@@ -16,7 +17,7 @@
   border: none;
   text-align: center;
 }
-/* line 17, ../sass/top100.scss */
+/* line 18, ../sass/top100.scss */
 #holder svg {
   /*float: left;*/
   margin-top: -15px;
