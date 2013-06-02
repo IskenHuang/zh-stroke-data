@@ -1,0 +1,394 @@
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "base.scss";
+
+
+$text-gary : #555555;
+$text-red : #DB3D44;
+
+$color-white : #FFFFFF;
+$color-gary : #EEEEEE;
+$color-block : #222222;
+$color-white : #E30919;
+
+
+body {
+    background: #eeeeee;
+    color: $text-gary;
+}
+
+li{
+    @include no-bullet;
+}
+
+
+.header {
+    @include box-sizing(border-box);
+    // font-family : $tmms-font-Arial-Regular ;
+    
+    background: #fff;
+    color: #555;
+    border-bottom: 1px solid #DDD;
+    @include box-shadow(0 1px 1px 0 rgba(0,0,0,.25));
+
+   @media (max-width: 767px) {
+        padding: 0;
+   }
+
+    .container{
+    	height: 90px;
+        // position: relative;
+
+       @media (max-width: 767px) {
+       		width:  100px;
+		}
+
+        .che_logo{
+        	cursor: pointer;
+        	background: #77CC6D;
+        	color: #fff;
+        	font-size: 40px;
+        	line-height: 70px;
+			height: 70px;
+			display: inline-block;
+			float: left;
+	    	padding:10px 30px;
+
+			@media (max-width: 767px) {
+			    position: absolute;
+			    left: 0px;
+			}
+
+        }
+        .che_nav{
+        	line-height: 70px;
+			height: 70px;
+			font-size: 40px;
+			display: inline-block;
+			float: right;
+
+			div{
+				cursor: pointer;
+
+				width: auto;
+				padding: 10px 30px;
+				float: left;
+
+				&:hover{
+					background-color: #F7F7F7;
+				}
+			}
+
+        }
+        .mobile-nav{
+        	background-image: url("/img/ic_menu.png");
+        	width:40px;
+        	height: 40px;
+        	display: inline-block;
+        	float: right;
+
+			@media (max-width: 767px) {
+			    position: absolute;
+			    right: 10px;
+			    top: 23px;
+			}
+        }
+
+    }
+}
+.demo_wrapper{
+
+	background:#F5F5F5;
+
+	.container{
+
+		@media (max-width: 767px) {
+		 	width:100%;
+		}
+
+		.demo_area{
+			position: relative;	
+
+			input{
+				@extend .tmms-input;
+				position: absolute;
+				margin: 0;
+				bottom: 0px;
+				left: 66px;
+				// width: 807px;
+				text-align: center;
+			}
+
+		}
+	}
+}
+
+.services_area{
+
+	background: #fff;
+	padding: 30px 0 ;
+
+	.container{
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	.services{
+		height: auto;
+
+		.service{
+			position: relative;
+
+			@media (max-width: 767px) {
+
+			 	width:96%;
+			 	margin: 0 2% 20px 2%;
+			}
+
+
+			.service_header{
+				height: 70px;
+
+				.icon{
+					height: 70px;
+					width:70px;
+					background: #77CC6D;
+					display: inline-block;
+					float: left;
+
+					@media (max-width: 767px) {
+						width:20%;
+					}
+				}
+				.sub_title{
+					display: inline-block;
+					margin-left: 70px;
+					font-size: 20px;
+					height: 70px;
+					line-height: 70px;
+					color: #444;
+
+					@media (max-width: 767px) {
+						text-align: center;
+						width:80%;
+						margin-left: 0px;
+					}
+				}
+			}
+			.service_body{
+				background: #F5F5F5;
+				position: relative;
+				padding: 26px;
+			}
+		}
+	}
+}
+
+
+
+.footer {
+    @include box-sizing(border-box);
+
+    border-top: solid 1px #DDD;
+    background-color: #F5F5F5;
+    
+    height: 80px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 11px;
+
+    @media (max-width: 767px) {
+        height: auto;
+    }
+
+    .container{
+
+        @media (max-width: 767px) {
+            padding: 11px 25px 10px 25px;
+        }
+    }
+    
+    a{
+        color: $text-gary;
+
+        &:hover{
+
+            color: $text-red;
+            text-decoration: none;
+        }
+    }
+    
+    .logo{
+        float: right;
+
+        @media (max-width: 767px) {
+            text-align: right;
+            float: none;
+            margin-right: -1px;
+            padding-bottom: 14px;
+        }
+    }
+
+    .dropdown{
+
+        float: left;
+        
+        .dropdown-toggle{
+            background-image: url(../img/icon_lang_s.png);
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            padding: 4px 0 3px 24px;
+            
+            &:hover{
+                background-position: 0px -18px;
+                text-decoration: none;
+                color: $text-red;
+            }
+        }
+        
+        .dropdown-menu{
+            text-align: left;
+            
+            li{
+                a:hover{
+                    @include background (linear-gradient(color-stops(#444444, #373737)));
+                    
+                    background-color: #3F3F3F;
+                    background-repeat: repeat-x;
+                }
+            }
+        }
+    }
+
+    .external_link{
+        color: #686868;
+        font-size: 11px;
+        letter-spacing: -0.03em;
+        font-weight: normal;
+        margin-bottom: 8px;
+
+        @media (max-width: 767px){
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .nav{
+            margin: 0;
+
+            @media (max-width: 767px){
+                display: inline-block;
+            }            
+
+            a{
+                display: inline-block;
+                padding: 0 5px;
+
+                @media (max-width: 767px){
+                   padding: 0px;
+                } 
+
+                &:hover{
+                    background-color:#F5F5F5;
+                }
+            }
+
+            li{
+                float: left;
+
+                &:first-child{
+
+                   a{
+                        padding-left: 0;
+                       
+                    }   
+                }
+                 &:last-child{
+
+                    a{
+                        padding-right: 0;
+                    }
+
+                 }
+            }
+
+            .spot{
+                display: inline-block;
+                background-image: url("../img/ic_dot.png");
+                width: 18px;
+                height: 18px;
+                margin: 0 10px;
+
+                @media (max-width: 767px){
+
+                    margin: 0;
+                } 
+            }
+
+        }
+    }
+    .footer_mobile_separator{
+        
+        border-top: 1px solid #ccc;
+        margin: 20px 0 15px 0;
+    }
+
+    .copyright{
+
+        color: #999999;
+
+        @media (max-width: 767px) {
+
+            margin: 10px;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+    body{
+        padding: 0;  
+
+        .header{
+            .container{
+                width:950px;
+            }
+        }
+
+        article{
+            .container{
+                width: 950px;
+            }
+        }
+        .footer{
+            .container{
+                width: 950px;
+            }
+        }
+    }
+    
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+   
+    body{
+        padding: 0;
+        
+    }
+   
+}
+
+    
+
+
