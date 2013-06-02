@@ -68,14 +68,11 @@
 
 
     <script>
+        // override growlCSS
+        $.blockUI.defaults.growlCSS.width = '250px';
+
         $(".mobile-nav").on("click",function(){
             $(".mobile-menu-container").toggleClass("active");
         });
-
-
-
     </script>
-
-
-
 </html>
