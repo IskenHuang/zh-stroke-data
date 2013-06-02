@@ -1,0 +1,28 @@
+<% layout('layout') -%>
+<style type="text/css">
+.grid-row {
+	float       : left;
+	font-size   : 100pt;
+	font-family : Arial;
+	color       : #666;
+}
+
+#holder {
+	border           : 1px solid #ccc;
+	width            : 99%;
+	background-color : #666;
+	height           : 450px;
+}
+#holder svg {
+    float: left;
+}
+</style>
+
+<!-- <input type="text" id="word" value="九"/> -->
+<div id="holder" class="clearfix"></div>
+<div id="top100-grid"></div>
+
+<script type="text/template" id="template-top100-grid-row">
+	<div class="grid-row" data-uni="##UNI##">##TEXT##</div>
+</script>
+<script type="text/javascript" src="scripts/top100.js" charset="utf-8"> </script>

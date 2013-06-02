@@ -24,7 +24,7 @@ class DrawChinese
         # outlineElement.hover (-> this.transform("s0.3") ), (-> this.transform("s0.2") )
         return outlineElement
 
-    fetchStrokeXml: (code, cb) -> $.get "../utf8/" + code.toLowerCase() + ".xml", cb, "xml"
+    fetchStrokeXml: (code, cb) -> $.get "../data/words/utf8/" + code.toLowerCase() + ".xml", cb, "xml"
 
     strokeWord: (word, cb) ->
         utf8code = escape(word).replace(/%u/ , "")
