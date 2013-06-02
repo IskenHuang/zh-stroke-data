@@ -17,10 +17,10 @@ $(function() {
         var ans = $(".user-input").val();
 
         if ( exam.checkAnswer(ans)) {
-            alert('答對了 xDD');
+            $.growlUI('答對了!!!');
         }
         else {
-            alert('Wrong Answer !!!!');
+            $.growlUI('答錯了.... orz');
         }
     });
 });
