@@ -36,18 +36,18 @@
             <div class='mobile-menu-arrow'></div>
             <div id='menu-Menu' class='mobile-menu-inner'>
                 <ul>
-                    <li><a >One</a></li>
-                    <li><a>Two</a></li>
-                    <li><a>Three</a></li>
+                    <li><a>常用一百字</a></li>
+                    <li><a>學數字</a></li>
+                    <li><a>考試</a></li>
                     <li></li>
                 </ul>
             </div>
         </div>
 
-        <%- body -%>
         <div class='demo_wrapper'>
         	<div class='container'>
 	        	<div class='demo_area'>
+                     <div class='exam_block'></div>
 	        		 <input class="user-input" type="text" name="word" >
 	    		</div>
         	</div>
@@ -59,7 +59,7 @@
 
     <script>
         $(".mobile-nav").on("click",function(){
-            $(".mobile-menu-container").toggleClass("tmms-visible-phone");
+            $(".mobile-menu-container").toggleClass("active");
         });
 
 
