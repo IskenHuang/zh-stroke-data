@@ -45,8 +45,22 @@
     <h3 id="myModalLabel">解釋</h3>
   </div>
   <div class="modal-body">
-    <p>名</p>
-    <p>動</p>
+    <p>
+    	<span>名 : </span>
+    	<span class='noun'></span>
+    </p>
+    <p>
+    	<span>動 : </span>
+    	<span class='noun'></span>
+    </p>
+    <p>
+    	<span>kk : </span>
+    	<span class='kk'></span>
+    </p>
+    <p>
+    	<span>En : </span>
+    	<span class='english'></span>
+    </p>
   </div>
 </div>
 
@@ -54,49 +68,4 @@
 	<div id="holder" class="clearfix"></div>
 </script>
 <script type="text/javascript" src="scripts/index.js" charset="utf-8"> </script>
-<script>
-	$('#explan_modal').modal("show");
 
-		
-    $(".user-input").on("keyup", function(e) {
-
-    	var wording = encodeURIComponent($(".user-input").val());
-
-        // enter
-        if ( e.which === 13 ) {
-
-
-        	if( wording === "" || wording === null || wording === undefined ){
-
-        		alert("請輸入文字");
-
-        		return false;
-        	}
-
-            
-            $(this).blur();
-
-	         $.ajax({
-	            url: "https://www.moedict.tw/raw/" + wording,
-	            type: "GET",
-	            dataType: "json",
-	            async: true,
-	            error: function(jqXHR,b,c){
-
-	            },
-	            success: function(data){
-
-	            	console.log(data);
-
-		        }
-            });
-
-        }
-        // exit
-        else if ( e.which === 27 ) {
-            
-            $(this).blur();
-          
-        }
-    });
-</script>

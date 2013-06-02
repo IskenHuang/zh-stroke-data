@@ -29,6 +29,15 @@ li{
 
 .modal{
 		@include border-radius(0px); 	
+
+        @media (max-width: 768px){
+            margin: 0 10px;
+            width: auto;
+            height: auto;
+            overflow: auto;
+
+            left: 0px;
+        }
 }
 
 
