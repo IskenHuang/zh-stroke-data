@@ -5,7 +5,7 @@ $(function() {
 
     // show this wrapper
     $(".exam_wrapper").removeClass("hide");
-
+    $(".user-input-submit").hide();
 
     exam.fetch( examId , function(examData) {
         $(".exam_block").html( examData.content );

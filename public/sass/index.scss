@@ -145,6 +145,15 @@ li{
                 height: 360px;
                 width: 100%;
             }
+            
+            .user-input-submit {
+                display: inline-block;
+                width: auto;
+                position: absolute;
+                right: 0;
+                background: #ccc;
+                font-size: 14px;
+            }
 
 			input{
 				@extend .tmms-input;
