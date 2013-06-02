@@ -146,6 +146,12 @@ li{
 
 .exam_wrapper {
     text-align: center;
+    
+	.container{
+		@media (max-width: 767px) {
+		 	width:100%;
+		}
+    }
 
     input {
         width: 200px;
