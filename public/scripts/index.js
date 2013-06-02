@@ -42,8 +42,6 @@ $(function() {
                     var kk = data.h[0].p;
                     var english = data.translation.English[0];
 
-                    $('#explan_modal').modal("show");
-
                     $("#explan_modal").find(".noun").text(noun)
 
                     .end()
