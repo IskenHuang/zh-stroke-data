@@ -21,7 +21,7 @@
     };
 
     TextToSpeach.prototype.appendAudioPlayer = function(url) {
-      return $('body').append('<audio id="text-to-speech" preload="auto" controls><source src="' + url + '" type="audio/mp3" /></audio>');
+      return $('body').append('<audio id="text-to-speech" preload="auto" controls style="display:none;"><source src="' + url + '" type="audio/mp3" /></audio>');
     };
 
     TextToSpeach.prototype.removeAudioPlayer = function() {
