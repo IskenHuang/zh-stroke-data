@@ -6,7 +6,22 @@
     function Exam() {}
 
     Exam.prototype.fetch = function(id, cb) {
-      return $.get("data/exam/" + id + ".json", cb);
+      var that = this; 
+      return $.get("data/exam/" + id + ".json", function(data) {
+        that.examData = data;
+        cb(data);
+      });
+    };
+
+    Exam.prototype.getExamCount = function() {
+      return 1;
+    };
+
+    Exam.prototype.checkAnswer = function(yourAnswer) {
+      if ( yourAnswer === this.examData.content ) {
+        return true;
+      }
+      return false;
     };
 
     window.Exam = Exam;
