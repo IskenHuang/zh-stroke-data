@@ -5,14 +5,16 @@ $(function() {
 
     $(".user-input-submit").on("click", submitWording);
 
+    $(".show_intro_modal").removeClass("hide");
+    $(".show_intro_modal").on("click", function() {
+        $('#explan_modal').modal("show");
+    });
+
     function emptyAndDraw( wording ) {
         // empty & draw
         $('#holder').empty();
         draw.strokeWord( wording );
     }
-
-    
-
 
     function submitWording() {
         
@@ -36,20 +38,11 @@ $(function() {
 	            },
 	            success: function(data){
 
-                    console.log(data.h[0]);
-
                     var noun = data.h[0].d[0].f;
-                    var verb = data.h[0].d[1].f;
                     var kk = data.h[0].p;
                     var english = data.translation.English[0];
 
-                    $('#explan_modal').modal("show");
-
                     $("#explan_modal").find(".noun").text(noun)
-
-                    .end()
-
-                    .find(".verb").text(verb)
 
                     .end()
 
