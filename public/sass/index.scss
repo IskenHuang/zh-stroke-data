@@ -36,6 +36,14 @@ li{
         padding: 0;
    }
 
+   a{
+   		color: #333;	
+
+   		&:hover{
+   			color: #444;
+		}
+   }
+
     .container{
     	height: 90px;
         // position: relative;
