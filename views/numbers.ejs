@@ -1,12 +1,28 @@
 <% layout('layout') -%>
 
-<input type="text" id="word" value="九"/>
+
 <div class="well">
-    <audio id="ma-speech" preload="auto" controls>
+    <audio id="ma-speech" preload="auto" controls style="display:none;">
         <source src="audio/one-to-ten.mp3" type="audio/mp3" />
         <source src="audio/one-to-ten.ogg" type="audio/ogg" />
     </audio>
 </div>
 
+<script type="text/template" id="template-top100-holder">
+	<div id="holder" class="clearfix" style="text-align: center;"></div>
+</script>
+<script type="text/template" id="template-number-buttons">
+	<div>
+		<a class="btn btn-large btn-link">一</a>
+		<a class="btn btn-large btn-link">二</a>
+		<a class="btn btn-large btn-link">三</a>
+		<a class="btn btn-large btn-link">四</a>
+		<a class="btn btn-large btn-link">五</a>
+		<a class="btn btn-large btn-link">六</a>
+		<a class="btn btn-large btn-link">七</a>
+		<a class="btn btn-large btn-link">八</a>
+		<a class="btn btn-large btn-link">九</a>
+	</div>
+</script>
 <script src="scripts/BumblerSpeech.js" type="text/javascript" charset="utf-8"></script>
 <script src="scripts/numbers/index.js" type="text/javascript" charset="utf-8"></script>
