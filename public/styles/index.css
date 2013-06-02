@@ -693,3 +693,29 @@ li {
     padding: 0;
   }
 }
+/* line 506, ../sass/index.scss */
+#holder {
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #666;
+  height: 360px;
+  border: none;
+  text-align: center;
+}
+/* line 514, ../sass/index.scss */
+#holder svg {
+  /*float: left;*/
+  margin-top: -15px;
+}
+
+/* line 522, ../sass/index.scss */
+div.growlUI {
+  background: url(../img/info.png) no-repeat 10px 10px;
+}
+
+/* line 523, ../sass/index.scss */
+div.growlUI h1, div.growlUI h2 {
+  color: white;
+  padding: 5px 5px 5px 75px;
+  text-align: left;
+}

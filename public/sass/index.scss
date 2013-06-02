@@ -504,13 +504,19 @@ li{
 }
 
 #holder {
-    border: 1px solid #ccc;
-    width: 100%;
-    background-color: #666;
-    height: 360px;
-    border: none;
-    text-align: center;
+	border           : 1px solid #ccc;
+	width            : 100%;
+	background-color : #666;
+	height           : 360px;
+	border           : none;
+	text-align       : center;
+
+	svg {
+	    /*float: left;*/
+	    margin-top : -15px;
+   	}
 }
+
 
 // 3rd party
 div.growlUI { background: url(../img/info.png) no-repeat 10px 10px }
