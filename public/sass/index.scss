@@ -1,0 +1,574 @@
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "base.scss";
+
+
+$text-gary : #555555;
+$text-red : #DB3D44;
+
+$color-white : #FFFFFF;
+$color-gary : #EEEEEE;
+$color-block : #222222;
+$color-white : #E30919;
+
+
+body {
+    color: $text-gary;
+
+   	@media (max-width: 767px) {
+   		
+        padding: 0;
+    }
+
+}
+
+li{
+    @include no-bullet;
+}
+
+.modal{
+		@include border-radius(0px); 	
+
+        @media (max-width: 768px){
+            margin: 0 10px;
+            width: auto;
+            height: auto;
+            overflow: auto;
+
+            left: 0px;
+        }
+}
+
+
+.header {
+    @include box-sizing(border-box);
+    // font-family : $tmms-font-Arial-Regular ;
+    
+    background: #fff;
+    color: #555;
+    border-bottom: 1px solid #DDD;
+    @include box-shadow(0 1px 1px 0 rgba(0,0,0,.25));
+
+   @media (max-width: 767px) {
+        padding: 0;
+   }
+
+   a{
+   		color: #333;	
+
+   		&:hover{
+   			color: #444;
+		}
+   }
+
+    .container{
+    	height: 90px;
+        // position: relative;
+
+       @media (max-width: 767px) {
+       		width:  100%;
+		}
+
+        .che_logo{
+        	cursor: pointer;
+        	background: #77CC6D;
+        	color: #fff;
+        	font-size: 40px;
+        	line-height: 70px;
+			height: 70px;
+			display: inline-block;
+			float: left;
+	    	padding:10px 30px;
+
+			@media (max-width: 767px) {
+			    position: absolute;
+			    left: 0px;
+			}
+
+			a{
+				color:#fff;
+
+				&:hover{
+					text-decoration: none;
+				}
+			}
+
+        }
+        .che_nav{
+        	line-height: 70px;
+			height: 70px;
+			font-size: 28px;
+			display: inline-block;
+			float: right;
+
+			div{
+				cursor: pointer;
+
+				width: auto;
+				padding: 10px 30px;
+				float: left;
+
+				&:hover{
+					background-color: #F7F7F7;
+				}
+			}
+
+        }
+        .mobile-nav{
+        	background-image: url("/img/ic_menu.png");
+        	width:40px;
+        	height: 40px;
+        	display: inline-block;
+        	float: right;
+
+			@media (max-width: 767px) {
+			    position: absolute;
+			    right: 10px;
+			    top: 23px;
+			}
+        }
+
+    }
+}
+.demo_wrapper{
+
+	background:#F5F5F5;
+
+	.container{
+
+
+		@media (max-width: 767px) {
+		 	width:100%;
+		}
+
+		.demo_area{
+			position: relative;	
+            border: 30px solid black;
+            margin: 30px 0 ;
+            height: 400px;
+
+            .exam_block {
+                position: absolute;
+                font-size: 85px;
+                line-height: 100%;
+                text-align: center;
+                overflow: auto;
+                height: 360px;
+                width: 100%;
+            }
+            
+            .user-input-submit {
+                display: inline-block;
+                width: auto;
+                position: absolute;
+                right: 0;
+                background: #ccc;
+                font-size: 14px;
+            }
+
+			input{
+				@extend .tmms-input;
+				position: absolute;
+				margin: 0;
+				bottom: 0px;
+                width: 100%;
+                height: 40px;
+				text-align: center;
+			}
+
+		}
+	}
+}
+
+.exam_wrapper {
+    text-align: center;
+    
+	.container{
+		@media (max-width: 767px) {
+		 	width:100%;
+		}
+    }
+
+    input {
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+        margin: 50px;
+    }
+}
+
+.services_area{
+
+	background: #fff;
+	padding: 30px 0 ;
+
+	.container{
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+
+	.services{
+		height: auto;
+
+		.service{
+			position: relative;
+
+			@media (max-width: 767px) {
+
+			 	width:96%;
+			 	margin: 0 2% 20px 2%;
+			}
+
+
+			.service_header{
+				height: 70px;
+
+				.icon{
+					height: 70px;
+					line-height: 70px;
+					width:70px;
+					background: #77CC6D;
+					display: inline-block;
+					float: left;
+
+					@media (max-width: 767px) {
+						width:20%;
+					}
+
+					i{
+						color: #fff;
+						font-size: 20px;
+						text-align: center;
+						display: block;
+					}
+
+				}
+				.sub_title{
+					display: inline-block;
+					margin-left: 70px;
+					font-size: 20px;
+					height: 70px;
+					line-height: 70px;
+					color: #444;
+
+					@media (max-width: 767px) {
+						text-align: center;
+						width:80%;
+						margin-left: 0px;
+					}
+				}
+			}
+			.service_body{
+				background: #F5F5F5;
+				position: relative;
+				padding: 26px;
+			}
+		}
+	}
+}
+
+.mobile-menu-container{
+
+        position: relative;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: #F5F5F5;
+        margin-bottom:10px;
+
+        &.tmms-visible-phone{
+
+            display: none;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+
+        }
+
+        &.active{
+
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+
+
+        .mobile-menu-arrow{
+            background-image: url("/img/ic_arrowup_phone.png");
+            width:34px;
+            height: 34px;
+            position: absolute;
+            right: 13px;
+            top: -23px;
+
+        }
+
+        .mobile-menu-inner{
+            padding: 10px 25px;
+            border-top: solid 1px #DDDDDD;
+            border-bottom: solid 1px #DDDDDD;
+
+            >ul{
+                margin: 0px;
+                list-style: none;
+
+                >li{
+                    line-height: 20px;
+                    text-align: center;
+                    border-top: solid 1px #FFFFFF;
+                    box-shadow: 0px -1px 0px #dddddd;
+
+                    >a{
+                        border-top: solid 1px #FDFDFD;
+                        display: block;
+                        padding: 14px 0px 16px 0px;
+                        color: #444444;
+                        font-size: 20px;
+                        letter-spacing: -0.03em;
+
+                        &:hover{
+                            text-decoration: none;
+                        }
+
+                        &:active{
+                            text-decoration: none;
+                            background: #77CC6D;
+                            color:#fff;
+                        }
+
+                        &:nth-child(4){
+                			padding: 0;
+            			};
+                    }
+                }
+              
+            }
+        }
+    }
+
+
+.show_intro_modal {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    font-size: 36px;
+    line-height: 36px;
+
+    &.hide {
+        display: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.footer {
+    @include box-sizing(border-box);
+
+    border-top: solid 1px #DDD;
+    background-color: #F5F5F5;
+    
+    height: 80px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 11px;
+
+    @media (max-width: 767px) {
+        height: auto;
+    }
+
+    .container{
+
+        @media (max-width: 767px) {
+            padding: 11px 25px 10px 25px;
+        }
+    }
+    
+    a{
+        color: $text-gary;
+
+        &:hover{
+
+            color: $text-red;
+            text-decoration: none;
+        }
+    }
+    
+    .logo{
+        float: right;
+
+        @media (max-width: 767px) {
+            text-align: right;
+            float: none;
+            margin-right: -1px;
+            padding-bottom: 14px;
+        }
+    }
+
+    .dropdown{
+
+        float: left;
+        
+        .dropdown-toggle{
+            background-image: url(../img/icon_lang_s.png);
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            padding: 4px 0 3px 24px;
+            
+            &:hover{
+                background-position: 0px -18px;
+                text-decoration: none;
+                color: $text-red;
+            }
+        }
+        
+        .dropdown-menu{
+            text-align: left;
+            
+            li{
+                a:hover{
+                    @include background (linear-gradient(color-stops(#444444, #373737)));
+                    
+                    background-color: #3F3F3F;
+                    background-repeat: repeat-x;
+                }
+            }
+        }
+    }
+
+    .external_link{
+        color: #686868;
+        font-size: 11px;
+        letter-spacing: -0.03em;
+        font-weight: normal;
+        margin-bottom: 8px;
+
+        @media (max-width: 767px){
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .nav{
+            margin: 0;
+
+            @media (max-width: 767px){
+                display: inline-block;
+            }            
+
+            a{
+                display: inline-block;
+                padding: 0 5px;
+
+                @media (max-width: 767px){
+                   padding: 0px;
+                } 
+
+                &:hover{
+                    background-color:#F5F5F5;
+                }
+            }
+
+            li{
+                float: left;
+
+                &:first-child{
+
+                   a{
+                        padding-left: 0;
+                       
+                    }   
+                }
+                 &:last-child{
+
+                    a{
+                        padding-right: 0;
+                    }
+
+                 }
+            }
+
+            .spot{
+                display: inline-block;
+                background-image: url("../img/ic_dot.png");
+                width: 18px;
+                height: 18px;
+                margin: 0 10px;
+
+                @media (max-width: 767px){
+
+                    margin: 0;
+                } 
+            }
+
+        }
+    }
+    .footer_mobile_separator{
+        
+        border-top: 1px solid #ccc;
+        margin: 20px 0 15px 0;
+    }
+
+    .copyright{
+
+        color: #999999;
+
+        @media (max-width: 767px) {
+
+            margin: 10px;
+            text-align: center;
+        }
+    }
+    
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+    body{
+        padding: 0;  
+    
+    }
+    
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+   
+    body{
+        padding: 0;
+        
+    }
+   
+}
+
+#holder {
+	border           : 1px solid #ccc;
+	width            : 100%;
+	background-color : #666;
+	height           : 360px;
+	border           : none;
+	text-align       : center;
+
+	svg {
+	    /*float: left;*/
+	    margin-top : -15px;
+   	}
+}
+
+
+// 3rd party
+div.growlUI { background: url(../img/info.png) no-repeat 10px 10px }
+div.growlUI h1, div.growlUI h2 {
+    color: white; padding: 5px 5px 5px 75px; text-align: left
+}

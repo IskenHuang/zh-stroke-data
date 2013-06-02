@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/styles/bootstrap-responsive.css' />
+        <link rel='stylesheet' href='/styles/bootstrap.css' />
+        <link rel='stylesheet' href='/styles/index.css' />
+        <%-stylesheets%>
+        <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"> </script>
+        <script src="scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"> </script>
+   
+        <script src="scripts/jquery.blockUI.js" type="text/javascript" charset="utf-8"> </script>
+        <script src="scripts/DrawChinese.js" type="text/javascript" charset="utf-8"> </script>
+
+        <%-scripts%>
+    </head>
+    <body>
+        <div class="header">
+	        <div class="container">
+                <a href="/"><div class='che_logo'>Cheese</div></a>
+	        	<div class='che_nav hidden-phone'>
+                    <a href="top100">
+                        <div>常用一百字</div>
+                    </a>
+                    <a href="numbers">
+                        <div>學數字</div>
+                    </a>
+                    <a href="exam">
+                        <div>考試</div>
+                    </a>
+                    <a href="thanks">
+                        <div>感謝名單</div>
+                    </a>
+	        	</div>
+	        	<div class='mobile-nav visible-phone'></div>
+			</div>
+        </div>
+        <%-blocks.subHeader%>
+        <div class='mobile-menu-container tmms-visible-phone'>
+            <div class='mobile-menu-arrow'></div>
+            <div id='menu-Menu' class='mobile-menu-inner'>
+                <ul>
+                    <li><a href="top100">常用一百字</a></li>
+                    <li><a href="numbers">學數字</a></li>
+                    <li><a href="exam">考試</a></li>
+                    <li><a href="thanks">感謝名單</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ma-number"></div>
+        <div class='demo_wrapper'>
+        	<div class='container'>
+	        	<div class='demo_area'>
+                     <div class='exam_block hide'></div>
+                     <div class='top100_block'></div>
+                     <div class='show_intro_modal hide'>萌</div>
+                     <input class="user-input" type="text" name="word">
+                     <input class="user-input-submit tmms-btn-blue hide" type="button" value="OK">
+	    		</div>
+        	</div>
+        </div>
+
+        <div class='exam_wrapper hide'>
+            <div class='container'>
+                <input type="button" class="submit-exam tmms-btn-blue" value="送出" disabled />
+            </div>
+        </div>
+
+        <%- body -%>
+        <div class='footer'></div>
+    </body>
+
+
+    <script>
+        // override growlCSS
+        $.blockUI.defaults.growlCSS.width = '250px';
+
+        $(".mobile-nav").on("click",function(){
+            $(".mobile-menu-container").toggleClass("active");
+        });
+    </script>
+</html>

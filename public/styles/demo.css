@@ -1,0 +1,55 @@
+/* line 1, ../sass/demo.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 10, ../sass/demo.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 14, ../sass/demo.scss */
+body {
+  background: #333;
+  color: #fff;
+  font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 21, ../sass/demo.scss */
+#word {
+  font-size: 22px;
+  width: 99%;
+  padding: 6px 3px;
+}
+
+/* line 26, ../sass/demo.scss */
+#holder {
+  border: 1px solid #ccc;
+  width: 99%;
+}
+
+/* line 30, ../sass/demo.scss */
+#holder svg {
+  float: left;
+}
+
+/* line 33, ../sass/demo.scss */
+#copyright {
+  bottom: 0;
+  font: 300 .7em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+  position: absolute;
+  right: 1em;
+  text-align: right;
+}
+
+/* line 40, ../sass/demo.scss */
+#copyright a {
+  color: #fff;
+}

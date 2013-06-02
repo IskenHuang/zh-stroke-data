@@ -1,0 +1,73 @@
+<% layout('layout') -%>
+
+<div class='services_area'>
+
+        <div class='container services'>
+		<div class='row-fluid'>
+
+			<div class='span4 service'>
+				<div class='service_header'>
+					<div class='icon'>
+						<i class='icon_100'>100</i>
+					</div>
+					<div class='sub_title'>常用一百字</div>
+				</div>
+				<div class='service_body'>
+                    <div>
+                        對外國人士來說，學習中文的難度頗高。欲使學習中文的外國人士，能夠正確書寫國字，選定一百個國字的正確筆順，利用網路動畫方式使他們可以在網路上跟著書寫，希望有助於外國人士認字、寫字與發音，進而引起他們繼續學習中文的興趣。
+                    </div>
+                </div>
+			</div>
+			<div class='span4 service'>
+				<div class='service_header'>
+					<div class='icon'>
+						<i class='icon_write'>馬</i>
+					</div>
+					<div class='sub_title'>寫數字</div>
+				</div>
+				<div class='service_body'>猶如教師在黑板上教學生一筆一畫的書寫，讓偉大的總統教大家寫中文囉!!!</div>
+			</div>
+			<div class='span4 service'>
+			<div class='service_header'>
+					<div class='icon'>
+						<i class='icon_write'>write</i>
+					</div>
+					<div class='sub_title'>考試</div>
+				</div>
+				<div class='service_body'>隨機找個國字，現場來練習吧!</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="explan_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">解釋</h3>
+  </div>
+  <div class="modal-body">
+    <p>
+    	<span>名 : </span>
+    	<span class='noun'></span>
+    </p>
+    <p>
+    	<span>動 : </span>
+    	<span class='noun'></span>
+    </p>
+    <p>
+    	<span>kk : </span>
+    	<span class='kk'></span>
+    </p>
+    <p>
+    	<span>En : </span>
+    	<span class='english'></span>
+    </p>
+  </div>
+</div>
+
+<script type="text/template" id="template-top100-holder">
+	<div id="holder" class="clearfix"></div>
+</script>
+<script type="text/javascript" src="scripts/index.js" charset="utf-8"> </script>
+
