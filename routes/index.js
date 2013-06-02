@@ -18,3 +18,7 @@ exports.exam = function(req, res) {
 exports.numbers = function(req, res) {
   res.render('numbers', { title : 'Cheese'});
 };
+
+exports.thanks = function(req, res) {
+  res.render('thanks', { title : 'Cheese'});
+};
