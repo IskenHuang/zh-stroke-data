@@ -1,22 +1,24 @@
+/* line 1, ../sass/top100.scss */
 .grid-row {
-	float       : left;
-	font-size   : 100pt;
-	font-family : Arial;
-	color       : #666;
-	line-height : 1;
+  float: left;
+  font-size: 100pt;
+  font-family: Arial;
+  color: #666;
+  line-height: 1;
+  cursor: pointer;
 }
 
+/* line 10, ../sass/top100.scss */
 #holder {
-	border           : 1px solid #ccc;
-	width            : 100%;
-	background-color : #666;
-	height           : 360px;
-	border           : none;
-	text-align       : center;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #666;
+  height: 360px;
+  border: none;
+  text-align: center;
 }
-
+/* line 18, ../sass/top100.scss */
 #holder svg {
-    /*float: left;*/
-    margin-top : -15px;
+  /*float: left;*/
+  margin-top: -15px;
 }
-
