@@ -6,11 +6,14 @@
         <link rel='stylesheet' href='/styles/bootstrap-responsive.css' />
         <link rel='stylesheet' href='/styles/bootstrap.css' />
         <link rel='stylesheet' href='/styles/index.css' />
+        <%-stylesheets%>
         <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"> </script>
         <script src="scripts/DrawChinese.js" type="text/javascript" charset="utf-8"> </script>
+        <%-scripts%>
     </head>
     <body>
+        <%-blocks.header%>
         <div class="header">
 	        <div class="container">
 	        	<div class='che_logo'>Cheese</div>
@@ -28,7 +31,7 @@
 	        	<div class='mobile-nav visible-phone'></div>
 			</div>
         </div>
-
+        <%-blocks.subHeader%>
         <div class='mobile-menu-container tmms-visible-phone'>
             <div class='mobile-menu-arrow'></div>
             <div id='menu-Menu' class='mobile-menu-inner'>
@@ -41,17 +44,15 @@
             </div>
         </div>
 
-
-
         <%- body -%>
         <div class='demo_wrapper'>
         	<div class='container'>
 	        	<div class='demo_area'>
-	        		<img src="/img/bg_small_screens.png">
 	        		 <input class="user-input" type="text" name="word" >
 	    		</div>
         	</div>
         </div>
+        <%- body -%>
         <div class='footer'></div>
     </body>
 

@@ -117,14 +117,15 @@ li{
 
 		.demo_area{
 			position: relative;	
+            border: 30px solid black;
+            height: 400px;
 
 			input{
 				@extend .tmms-input;
 				position: absolute;
 				margin: 0;
 				bottom: 0px;
-				left: 66px;
-				// width: 807px;
+                width: 100%;
 				text-align: center;
 			}
 

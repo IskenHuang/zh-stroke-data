@@ -1,0 +1,17 @@
+.grid-row {
+	float       : left;
+	font-size   : 100pt;
+	font-family : Arial;
+	color       : #666;
+}
+
+#holder {
+	border           : 1px solid #ccc;
+	width            : 99%;
+	background-color : #666;
+	height           : 450px;
+}
+
+#holder svg {
+    float: left;
+}

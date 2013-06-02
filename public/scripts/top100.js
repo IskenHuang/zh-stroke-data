@@ -1,6 +1,8 @@
 $(function(){
-    var draw = new DrawChinese();
+    var draw = new DrawChinese(),
+        tts = new TextToSpeach();
     draw.strokeWord('永');
+    tts.gogoleSpeach('永');
 
     $.getJSON('../data/top100/top100.json', function(data) {
         $.each(data, function(key, val) {
