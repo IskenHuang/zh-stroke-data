@@ -14,7 +14,7 @@
     };
 
     Exam.prototype.getExamCount = function() {
-      return 1;
+      return 3;
     };
 
     Exam.prototype.checkAnswer = function(yourAnswer) {
