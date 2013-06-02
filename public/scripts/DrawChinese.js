@@ -2,7 +2,7 @@
 (function() {
   var DrawChinese;
 
-  DrawChinese = (function() {
+  window.DrawChinese = (function() {
     function DrawChinese(options) {
       if (options == null) {
         options = {};

@@ -2,7 +2,7 @@
 (function() {
   var BumblerSpeech;
 
-  BumblerSpeech = (function() {
+  window.BumblerSpeech = (function() {
     function BumblerSpeech(options) {
       var mergedOptions,
         _this = this;
