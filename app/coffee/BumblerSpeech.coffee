@@ -5,11 +5,7 @@ class BumblerSpeech
             @numberQueue = []
             @playing = false
         else
-            defaultOptions:
-                player: '#ma-speech'
-                numbers: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-
-            mergedOptions = $.extend({}, defaultOptions, options)
+            mergedOptions = $.extend({}, @defaultOptions, options)
             @player = document.querySelector(mergedOptions.player)
             @numberQueue = mergedOptions.numbers
             @playing = false
@@ -21,6 +17,10 @@ class BumblerSpeech
                     @playing = false
                     return
                 @playNumber(currentNumber)
+
+    defaultOptions:
+        player: '#ma-speech'
+        numbers: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
     delay: (ms, func) -> setTimeout func, ms
 
