@@ -120,17 +120,39 @@ li{
             border: 30px solid black;
             height: 400px;
 
+            .exam_block {
+                position: absolute;
+                font-size: 85px;
+                line-height: 100%;
+                text-align: center;
+                overflow: auto;
+                height: 360px;
+                width: 100%;
+            }
+
 			input{
 				@extend .tmms-input;
 				position: absolute;
 				margin: 0;
 				bottom: 0px;
                 width: 100%;
+                height: 40px;
 				text-align: center;
 			}
 
 		}
 	}
+}
+
+.exam_wrapper {
+    text-align: center;
+
+    input {
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+        margin: 50px;
+    }
 }
 
 .services_area{
