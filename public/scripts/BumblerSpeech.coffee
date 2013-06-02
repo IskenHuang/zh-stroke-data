@@ -20,7 +20,7 @@ class BumblerSpeech
 
     defaultOptions:
         player: '#ma-speech'
-        numbers: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+        numbers: []
 
     delay: (ms, func) -> setTimeout func, ms
 
@@ -106,16 +106,16 @@ class BumblerSpeech
         # 十 = 5341
         utf8code = escape(word)
                 .replace(/%u/g ,   "")
-                .replace(/5341/ig, "d10")
-                .replace(/4E5D/ig, "d9")
-                .replace(/516B/ig, "d8")
-                .replace(/4E03/ig, "d7")
-                .replace(/516D/ig, "d6")
-                .replace(/4E94/ig, "d5")
-                .replace(/56DB/ig, "d4")
-                .replace(/4E09/ig, "d3")
-                .replace(/4E8C/ig, "d2")
-                .replace(/4E00/ig, "d1")
+                .replace(/5341/ig, 10)
+                .replace(/4E5D/ig, 9)
+                .replace(/516B/ig, 8)
+                .replace(/4E03/ig, 7)
+                .replace(/516D/ig, 6)
+                .replace(/4E94/ig, 5)
+                .replace(/56DB/ig, 4)
+                .replace(/4E09/ig, 3)
+                .replace(/4E8C/ig, 2)
+                .replace(/4E00/ig, 1)
         return utf8code
 
     digitplay: (chineseWord) ->

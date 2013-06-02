@@ -39,7 +39,64 @@
 	</div>
 </div>
 
+<div id="explan_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">解釋</h3>
+  </div>
+  <div class="modal-body">
+    <p>名</p>
+    <p>動</p>
+  </div>
+</div>
+
 <script type="text/template" id="template-top100-holder">
 	<div id="holder" class="clearfix"></div>
 </script>
 <script type="text/javascript" src="scripts/index.js" charset="utf-8"> </script>
+<script>
+	$('#explan_modal').modal("show");
+
+		
+    $(".user-input").on("keyup", function(e) {
+
+    	var wording = encodeURIComponent($(".user-input").val());
+
+        // enter
+        if ( e.which === 13 ) {
+
+
+        	if( wording === "" || wording === null || wording === undefined ){
+
+        		alert("請輸入文字");
+
+        		return false;
+        	}
+
+            
+            $(this).blur();
+
+	         $.ajax({
+	            url: "https://www.moedict.tw/raw/" + wording,
+	            type: "GET",
+	            dataType: "json",
+	            async: true,
+	            error: function(jqXHR,b,c){
+
+	            },
+	            success: function(data){
+
+	            	console.log(data);
+
+		        }
+            });
+
+        }
+        // exit
+        else if ( e.which === 27 ) {
+            
+            $(this).blur();
+          
+        }
+    });
+</script>
