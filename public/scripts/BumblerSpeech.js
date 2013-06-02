@@ -148,22 +148,17 @@
     BumblerSpeech.prototype.chineseNumberToNumber = function(word) {
       var utf8code;
 
-      utf8code = escape(word).replace(/%u/g, "").replace(/4E5D/ig, 9).replace(/516B/ig, 8).replace(/4E03/ig, 7).replace(/516D/ig, 6).replace(/4E94/ig, 5).replace(/56DB/ig, 4).replace(/4E09/ig, 3).replace(/4E8C/ig, 2).replace(/4E00/ig, 1);
+      utf8code = escape(word).replace(/%u/g, "").replace(/5341/ig, "d10").replace(/4E5D/ig, "d9").replace(/516B/ig, "d8").replace(/4E03/ig, "d7").replace(/516D/ig, "d6").replace(/4E94/ig, "d5").replace(/56DB/ig, "d4").replace(/4E09/ig, "d3").replace(/4E8C/ig, "d2").replace(/4E00/ig, "d1");
       return utf8code;
     };
 
-    BumblerSpeech.prototype.digitplay = function() {
-      var seq, word, wordRegex;
+    BumblerSpeech.prototype.digitplay = function(chineseWord) {
+      var number, seq;
 
-      word = $(this.inputElement).val();
-      word = this.chineseNumberToNumber(word);
-      if (word.match(/0/)) {
-        alert('can not input "zero"');
-      }
-      wordRegex = word.match(/^[1-9]+$/);
-      if (wordRegex) {
-        seq = wordRegex[0].replace(/([\d])/g, ",d$1").split(",");
-        seq.splice(0, 1);
+      number = this.chineseNumberToNumber(chineseWord);
+      if (number) {
+        seq = number.replace(/([d]\d+)/g, "$1,").split(",");
+        seq = seq.splice(0, seq.length - 1);
         return this.playSequence(seq, true);
       }
     };

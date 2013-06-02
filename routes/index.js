@@ -14,3 +14,7 @@ exports.top100 = function(req, res) {
 exports.exam = function(req, res) {
   res.render('exam', { title : 'Cheese'});
 };
+
+exports.numbers = function(req, res) {
+  res.render('numbers', { title : 'Cheese'});
+};
