@@ -55,7 +55,7 @@ li{
         // position: relative;
 
        @media (max-width: 767px) {
-       		width:  100px;
+       		width:  100%;
 		}
 
         .che_logo{
@@ -72,6 +72,14 @@ li{
 			@media (max-width: 767px) {
 			    position: absolute;
 			    left: 0px;
+			}
+
+			a{
+				color:#fff;
+
+				&:hover{
+					text-decoration: none;
+				}
 			}
 
         }
@@ -116,6 +124,7 @@ li{
 	background:#F5F5F5;
 
 	.container{
+
 
 		@media (max-width: 767px) {
 		 	width:100%;
@@ -478,23 +487,7 @@ li{
 
     body{
         padding: 0;  
-
-        .header{
-            .container{
-                width:950px;
-            }
-        }
-
-        article{
-            .container{
-                width: 950px;
-            }
-        }
-        .footer{
-            .container{
-                width: 950px;
-            }
-        }
+    
     }
     
 }
