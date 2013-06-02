@@ -10,6 +10,7 @@
         <script src="scripts/raphael.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"> </script>
         <script src="scripts/DrawChinese.js" type="text/javascript" charset="utf-8"> </script>
+   
         <%-scripts%>
     </head>
     <body>
@@ -30,6 +31,7 @@
 	        	<div class='mobile-nav visible-phone'></div>
 			</div>
         </div>
+        <%-blocks.subHeader%>
         <div class='mobile-menu-container tmms-visible-phone'>
             <div class='mobile-menu-arrow'></div>
             <div id='menu-Menu' class='mobile-menu-inner'>
@@ -37,7 +39,6 @@
                     <li><a>常用一百字</a></li>
                     <li><a>學數字</a></li>
                     <li><a>考試</a></li>
-                    <li></li>
                 </ul>
             </div>
         </div>
@@ -51,6 +52,13 @@
 	    		</div>
         	</div>
         </div>
+
+        <div class='exam_wrapper hide'>
+            <div class='container'>
+                <input type="button" class="submit-exam tmms-btn-blue" value="送出" disabled />
+            </div>
+        </div>
+
         <%- body -%>
         <div class='footer'></div>
     </body>

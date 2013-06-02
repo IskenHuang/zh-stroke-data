@@ -3,14 +3,13 @@ $(function() {
     var exam = new Exam,
         examId = 1 + Math.floor( Math.random() * 1000 ) % exam.getExamCount();
 
-    // random out the exam id first
+    // show this wrapper
+    $(".exam_wrapper").removeClass("hide");
+
 
     exam.fetch( examId , function(examData) {
-
+        $(".exam_block").html( examData.content );
         $(".submit-exam").removeAttr("disabled");
-
-        // examData.title
-        // examData.content
     });
 
     $(".submit-exam").on("click", function() {
@@ -18,10 +17,10 @@ $(function() {
         var ans = $(".user-input").val();
 
         if ( exam.checkAnswer(ans)) {
-            alert('y');
+            alert('答對了 xDD');
         }
         else {
-            alert('x');
+            alert('Wrong Answer !!!!');
         }
     });
 });
