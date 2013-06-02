@@ -4,13 +4,13 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Cheese'});
 };
 
 exports.top100 = function(req, res) {
-  res.render('top100', { title : 'Express'});
+  res.render('top100', { title : 'Cheese'});
 };
 
 exports.exam = function(req, res) {
-  res.render('exam', { title : 'Express'});
+  res.render('exam', { title : 'Cheese'});
 };
