@@ -7,18 +7,3 @@
   line-height: 1;
   cursor: pointer;
 }
-
-/* line 10, ../sass/top100.scss */
-#holder {
-  border: 1px solid #ccc;
-  width: 100%;
-  background-color: #666;
-  height: 360px;
-  border: none;
-  text-align: center;
-}
-/* line 18, ../sass/top100.scss */
-#holder svg {
-  /*float: left;*/
-  margin-top: -15px;
-}

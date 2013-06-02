@@ -21,7 +21,7 @@
     <body>
         <div class="header">
 	        <div class="container">
-	        	<div class='che_logo'><a href="/">Cheese</a></div>
+                <a href="/"><div class='che_logo'>Cheese</div></a>
 	        	<div class='che_nav hidden-phone'>
                     <a href="top100">
                         <div>常用一百字</div>
@@ -32,6 +32,9 @@
                     <a href="exam">
                         <div>考試</div>
                     </a>
+                    <a href="thanks">
+                        <div>感謝名單</div>
+                    </a>
 	        	</div>
 	        	<div class='mobile-nav visible-phone'></div>
 			</div>
@@ -41,9 +44,10 @@
             <div class='mobile-menu-arrow'></div>
             <div id='menu-Menu' class='mobile-menu-inner'>
                 <ul>
-                    <li><a>常用一百字</a></li>
-                    <li><a>學數字</a></li>
-                    <li><a>考試</a></li>
+                    <li><a href="top100">常用一百字</a></li>
+                    <li><a href="numbers">學數字</a></li>
+                    <li><a href="exam">考試</a></li>
+                    <li><a href="thanks">感謝名單</a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +57,8 @@
 	        	<div class='demo_area'>
                      <div class='exam_block'></div>
                      <div class='top100_block'></div>
-	        		 <input class="user-input" type="text" name="word" >
+                     <input class="user-input" type="text" name="word">
+                     <input class="user-input-submit tmms-btn-blue hide" type="button" value="OK">
 	    		</div>
         	</div>
         </div>

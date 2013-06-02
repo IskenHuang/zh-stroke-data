@@ -148,6 +148,15 @@ li{
                 height: 360px;
                 width: 100%;
             }
+            
+            .user-input-submit {
+                display: inline-block;
+                width: auto;
+                position: absolute;
+                right: 0;
+                background: #ccc;
+                font-size: 14px;
+            }
 
 			input{
 				@extend .tmms-input;
@@ -505,6 +514,21 @@ li{
     }
    
 }
+
+#holder {
+	border           : 1px solid #ccc;
+	width            : 100%;
+	background-color : #666;
+	height           : 360px;
+	border           : none;
+	text-align       : center;
+
+	svg {
+	    /*float: left;*/
+	    margin-top : -15px;
+   	}
+}
+
 
 // 3rd party
 div.growlUI { background: url(../img/info.png) no-repeat 10px 10px }
