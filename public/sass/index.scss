@@ -510,6 +510,15 @@ li{
    
 }
 
+#holder {
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #666;
+    height: 360px;
+    border: none;
+    text-align: center;
+}
+
 // 3rd party
 div.growlUI { background: url(../img/info.png) no-repeat 10px 10px }
 div.growlUI h1, div.growlUI h2 {
