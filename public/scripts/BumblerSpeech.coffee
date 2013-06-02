@@ -94,39 +94,35 @@ class BumblerSpeech
             return false
 
     chineseNumberToNumber: (word) ->
-        # 1 = 4E00
-        # 2 = 4E8C
-        # 3 = 4E09
-        # 4 = 56DB
-        # 5 = 4E94
-        # 6 = 516D
-        # 7 = 4E03
-        # 8 = 516B
-        # 9 = 4E5D
+        # 一 = 4E00
+        # 二 = 4E8C
+        # 三 = 4E09
+        # 四 = 56DB
+        # 五 = 4E94
+        # 六 = 516D
+        # 七 = 4E03
+        # 八 = 516B
+        # 九 = 4E5D
+        # 十 = 5341
         utf8code = escape(word)
-                .replace(/%u/g , "")
-                .replace(/4E5D/ig, 9)
-                .replace(/516B/ig, 8)
-                .replace(/4E03/ig, 7)
-                .replace(/516D/ig, 6)
-                .replace(/4E94/ig, 5)
-                .replace(/56DB/ig, 4)
-                .replace(/4E09/ig, 3)
-                .replace(/4E8C/ig, 2)
-                .replace(/4E00/ig, 1)
+                .replace(/%u/g ,   "")
+                .replace(/5341/ig, "d10")
+                .replace(/4E5D/ig, "d9")
+                .replace(/516B/ig, "d8")
+                .replace(/4E03/ig, "d7")
+                .replace(/516D/ig, "d6")
+                .replace(/4E94/ig, "d5")
+                .replace(/56DB/ig, "d4")
+                .replace(/4E09/ig, "d3")
+                .replace(/4E8C/ig, "d2")
+                .replace(/4E00/ig, "d1")
         return utf8code
 
-    digitplay: ->
-        word = $(@inputElement).val()
-        word = @chineseNumberToNumber(word)
-
-        if word.match(/0/)
-            alert 'can not input "zero"'
-
-        wordRegex = word.match(/^[1-9]+$/)
-        if wordRegex
-            seq = wordRegex[0].replace(/([\d])/g, ",d$1").split(",")
-            seq.splice(0, 1)
+    digitplay: (chineseWord) ->
+        number = @chineseNumberToNumber( chineseWord )
+        if number
+            seq = number.replace(/([d]\d+)/g, "$1,").split(",")
+            seq = seq.splice(0, seq.length - 1)
             @playSequence(seq, true)
 
     AUDIO_MAP:
