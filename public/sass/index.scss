@@ -17,7 +17,6 @@ body {
     color: $text-gary;
 
    	@media (max-width: 767px) {
-
    		
         padding: 0;
     }
@@ -26,6 +25,10 @@ body {
 
 li{
     @include no-bullet;
+}
+
+.modal{
+		@include border-radius(0px); 	
 }
 
 
