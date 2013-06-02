@@ -3,15 +3,20 @@
 	font-size   : 100pt;
 	font-family : Arial;
 	color       : #666;
+	line-height : 1;
 }
 
 #holder {
 	border           : 1px solid #ccc;
-	width            : 99%;
+	width            : 100%;
 	background-color : #666;
-	height           : 450px;
+	height           : 360px;
+	border           : none;
+	text-align       : center;
 }
 
 #holder svg {
-    float: left;
+    /*float: left;*/
+    margin-top : -15px;
 }
+
