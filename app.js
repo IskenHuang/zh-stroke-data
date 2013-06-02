@@ -45,6 +45,8 @@ app.configure(function(){
 
 // router here
 app.get('/', routes.index);
+app.get('/top100', routes.top100);
+app.get('/exam', routes.exam);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
