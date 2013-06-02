@@ -4,7 +4,7 @@ $(function() {
         examId = 1 + Math.floor( Math.random() * 1000 ) % exam.getExamCount();
 
     // show this wrapper
-    $(".exam_wrapper").removeClass("hide");
+    $(".exam_wrapper, .exam_block").removeClass("hide");
     $(".user-input-submit").hide();
 
     exam.fetch( examId , function(examData) {

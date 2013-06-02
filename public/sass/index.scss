@@ -360,6 +360,10 @@ li{
     font-size: 36px;
     line-height: 36px;
 
+    &.hide {
+        display: none;
+    }
+
     &:hover {
         cursor: pointer;
     }
