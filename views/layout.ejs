@@ -28,6 +28,21 @@
 	        	<div class='mobile-nav visible-phone'></div>
 			</div>
         </div>
+
+        <div class='mobile-menu-container tmms-visible-phone'>
+            <div class='mobile-menu-arrow'></div>
+            <div id='menu-Menu' class='mobile-menu-inner'>
+                <ul>
+                    <li><a >One</a></li>
+                    <li><a>Two</a></li>
+                    <li><a>Three</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+
+
         <%- body -%>
         <div class='demo_wrapper'>
         	<div class='container'>
@@ -39,4 +54,17 @@
         </div>
         <div class='footer'></div>
     </body>
+
+
+    <script>
+        $(".mobile-nav").on("click",function(){
+            $(".mobile-menu-container").toggleClass("tmms-visible-phone");
+        });
+
+
+
+    </script>
+
+
+
 </html>
