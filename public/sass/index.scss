@@ -14,8 +14,14 @@ $color-white : #E30919;
 
 
 body {
-    background: #eeeeee;
     color: $text-gary;
+
+   	@media (max-width: 767px) {
+
+   		
+        padding: 0;
+    }
+
 }
 
 li{
@@ -72,7 +78,7 @@ li{
         .che_nav{
         	line-height: 70px;
 			height: 70px;
-			font-size: 40px;
+			font-size: 28px;
 			display: inline-block;
 			float: right;
 
@@ -118,6 +124,7 @@ li{
 		.demo_area{
 			position: relative;	
             border: 30px solid black;
+            margin: 30px 0 ;
             height: 400px;
 
 			input{
@@ -436,9 +443,6 @@ li{
     }
     
 }
-
-
-
 
 
 /* Large desktop */
