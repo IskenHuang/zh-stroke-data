@@ -340,6 +340,19 @@ li{
     }
 
 
+.show_intro_modal {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 
 .footer {
